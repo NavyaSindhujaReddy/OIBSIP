@@ -1,0 +1,21 @@
+body{
+    background-image:url('tempback.png');
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+.in{
+    padding-top:100px;
+    padding-bottom:50px;
+    text-align:center;
+    font-family:'Lucida Sans';
+}
+div{text-align:center;
+}
+label{
+    font-size:20px;;
+    font-weight:30px;
+}
+input{
+    font-size:20px;;
+    font-weight:30px;
+}

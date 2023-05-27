@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <link rel="icon" type="image/x-icon" href="temp.png">
+        <link rel="stylesheet" href="tempcon.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    </head>
+    <body>
+        <div class="in">
+            <h1>Temperature Converter</h1>
+        </div>
+        <br>
+        <div class="form">
+            <form id="clr">
+                <div>
+                    <label>Celsius(C)</label>
+                    <input type="number" id="C">
+                </div>
+                <br>
+                <div>
+                    <label style="">Farenheit(F)</label>
+                    <input type="number" id="F">
+                </div>
+                <br>
+                <div>
+                    <label>Kelvin(K)</label>
+                    <input type="number" id="K">
+                </div>
+                <br>
+                <div>
+                    <button type="button" onclick="myFunction()">Convert</button>
+                    <button type="button" onclick="myClear()">Clear</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            function myFunction()
+            {
+                let c=document.getElementById("C");
+                let f=document.getElementById("F");
+                let k=document.getElementById("K");
+                if(c.value)
+                {
+                    f.value=((parseFloat(c.value)* 9)/5) + 32;
+                    k.value=parseFloat(c.value) + 273.15;
+                }
+                else if(f.value)
+                {
+                    c.value=((parseFloat(f.value)-32)*5)/9;
+                    k.value=(((parseFloat(f.value)-32)*5)/9)+273.15;
+                }
+                else{
+                    c.value=parseFloat(k.value)-273.15;
+                    f.value=(((parseFloat(k.value)-273.15)*9)/5)+32;
+                }
+            }
+            function myClear()
+            {
+                document.getElementById("clr").reset();
+            }
+        </script>
+    </body>
+</html>
